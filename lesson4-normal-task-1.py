@@ -25,7 +25,7 @@ def is_name(name_surname):
 
 
 def is_email(e_mail):
-    ptr_email = '[a-z_0-9]+@[a-z0-9]+\.ru|org|com|'
+    ptr_email = r'[a-z_0-9]+@[a-z0-9]+\.(ru|org|com)$'
     try:
         re.match(ptr_email, e_mail).group()
     except AttributeError:
