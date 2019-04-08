@@ -25,9 +25,9 @@ def is_name(name_surname):
 
 
 def is_email(e_mail):
-    ptr_email = '[a-z_0-9]+@[a-z0-9]+\.(ru|org|com|])'
+    ptr_email = '[a-z_0-9]+@[a-z0-9]+\.ru|org|com|'
     try:
-        re.match(ptr_email, e_mail).group(1)
+        re.match(ptr_email, e_mail).group()
     except AttributeError:
         print('e-mail должен быть в формате: \n'
               'текст в нижнем регистре, допускается нижнее подчеркивание и цифры, \n'
